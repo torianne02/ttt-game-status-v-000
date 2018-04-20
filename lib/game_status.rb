@@ -68,11 +68,10 @@ def over?(board)
 end
 
 def winner(board)
-  won?(board).all? { |move| }
-    if move == "X"
-      return "X"
-    else
-      return "O"
+  if won?(board).any? { |e| e == "X"  } 
+    return "X"
+  else
+    return "O"
     end
-  end
+  end  
 end
