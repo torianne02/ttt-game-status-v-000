@@ -72,7 +72,5 @@ def winner(board)
     return "X"
   elsif won?(board)[0] == "O" && won?(board)[1] == "O" && won?(board)[2] == "O"
     return "O"
-  else
-    false
   end
 end
