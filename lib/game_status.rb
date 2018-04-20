@@ -68,7 +68,7 @@ def over?(board)
 end
 
 def winner(board)
-  won?(board).all? do |move|
+  won?(board).each do |move|
     if move == "X"
       return "X"
     else
