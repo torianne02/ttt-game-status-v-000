@@ -68,9 +68,11 @@ def over?(board)
 end
 
 def winner(board)
-  if WIN_COMBINATIONS[0] == "X" && WIN_COMBINATIONS[1] == "X" && WIN_COMBINATIONS[2] == "X"
-    return "X"
-  elsif WIN_COMBINATIONS[0] == "O" && WIN_COMBINATIONS[1] == "O" && WIN_COMBINATIONS[2] == "O"
-    return "O"
+  won?(board).all? do |move|
+    if move == "X"
+      return "X"
+    else
+      return "O"
+    end
   end
 end
