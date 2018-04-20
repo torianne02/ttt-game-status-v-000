@@ -60,9 +60,7 @@ def draw?(board)
 end
 
 def over?(board)
-  if full?(board) == true && draw?(board) == true
-    return true
-  elsif won?(board) == win_combination
+  if full?(board) == true && won?(board) != false && draw?(board) == true
     return true
   else
     return false
