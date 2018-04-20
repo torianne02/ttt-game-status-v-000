@@ -68,9 +68,9 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board).any? { |e| e == "X"  }
+  if won?(board).include? ("X")
     return "X"
   else
     return "O"
-  end 
+  end
 end
