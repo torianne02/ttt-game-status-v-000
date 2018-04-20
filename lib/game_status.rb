@@ -70,7 +70,7 @@ end
 def winner(board)
   if WIN_COMBINATIONS(board)[0] == "X" && WIN_COMBINATIONS(board)[1] == "X" && WIN_COMBINATIONS(board)[2] == "X"
     return "X"
-  else
+  elsif WIN_COMBINATIONS(board)[0] == "O" && WIN_COMBINATIONS(board)[1] == "O" && WIN_COMBINATIONS(board)[2] == "O"
     return "O"
   end
 end
